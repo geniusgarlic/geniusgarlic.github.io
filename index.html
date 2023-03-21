@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>My Website</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			color: #333;
+			background-color: #fff;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+		button {
+			display: block;
+			margin: 30px auto;
+			padding: 10px 20px;
+			font-size: 16px;
+			border-radius: 5px;
+			border: none;
+			background-color: #0077cc;
+			color: #fff;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #005fa3;
+		}
+		.theme-dark {
+			background-color: #333;
+			color: #fff;
+		}
+        .theme-smr {
+			background-color: #22f1e7;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<h1>Welcome to my website!</h1>
+	<button onclick="toggleTheme()">Switch Theme</button>
+	
+	<!--a script to switch between all the different themes, one at a time-->
+    <script>
+        function toggleTheme() {
+            var body = document.querySelector('body');
+            if (body.classList.contains('theme-dark')) {
+                body.classList.remove('theme-dark');
+                body.classList.add('theme-smr');
+            } else if (body.classList.contains('theme-smr')) {
+                body.classList.remove('theme-smr');
+            } else {
+                body.classList.add('theme-dark');
+            }
+        }
+    </script>
+
+</body>
+</html>
